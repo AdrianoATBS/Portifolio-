@@ -72,57 +72,59 @@ O projeto usa Tailwind CSS. Personalize as cores no arquivo `tailwind.config.js`
 
 ## 1.5. Estrutura do Projeto 📁
 
-
+```markdown
 ## 1.5. Estrutura do Projeto 📁
-1.5. Estrutura do Projeto 🚀
+
 Dentro deste modelo de portfólio, você encontrará os seguintes arquivos e diretórios:
 
+```text
+.
 ├── astro.config.mjs
 ├── LICENSE
 ├── package.json
 ├── package-lock.json
 ├── public
-│ ├── favicon.svg
-│ ├── pic.jpg
-│ └── Resume.pdf
+│   ├── favicon.svg
+│   ├── pic.jpg
+│   └── Resume.pdf
 ├── README.md
 ├── src
-│ ├── components
-│ │ ├── about_section
-│ │ │ ├── About.tsx
-│ │ │ ├── Education.tsx
-│ │ │ └── Experience.tsx
-│ │ ├── contact_section
-│ │ │ └── Contact.tsx
-│ │ ├── navbar
-│ │ │ ├── Hamburger.tsx
-│ │ │ └── Nav.jsx
-│ │ ├── post_section
-│ │ │ ├── Blog.astro
-│ │ │ └── Post.astro
-│ │ ├── projects_section
-│ │ │ ├── ProjectCard.tsx
-│ │ │ └── ProjectCarousel.tsx
-│ │ ├── search
-│ │ │ └── Search.tsx
-│ │ ├── ToggleDarkMode.jsx
-│ │ └── TopButton.jsx
-│ ├── data
-│ │ └── info.ts
-│ ├── env.d.ts
-│ ├── layouts
-│ │ ├── BaseLayout.astro
-│ │ └── PostLayout.astro
-│ ├── pages
-│ │ ├── index.astro
-│ │ ├── posts
-│ │ │ └── your-post-title.md
-│ │ └── posts.astro
-│ └── styles
-│ └── global.css
+│   ├── components
+│   │   ├── about_section
+│   │   │   ├── About.tsx
+│   │   │   ├── Education.tsx
+│   │   │   └── Experience.tsx
+│   │   ├── contact_section
+│   │   │   └── Contact.tsx
+│   │   ├── navbar
+│   │   │   ├── Hamburger.tsx
+│   │   │   └── Nav.jsx
+│   │   ├── post_section
+│   │   │   ├── Blog.astro
+│   │   │   └── Post.astro
+│   │   ├── projects_section
+│   │   │   ├── ProjectCard.tsx
+│   │   │   └── ProjectCarousel.tsx
+│   │   ├── search
+│   │   │   └── Search.tsx
+│   │   ├── ToggleDarkMode.jsx
+│   │   └── TopButton.jsx
+│   ├── data
+│   │   └── info.ts
+│   ├── env.d.ts
+│   ├── layouts
+│   │   ├── BaseLayout.astro
+│   │   └── PostLayout.astro
+│   ├── pages
+│   │   ├── index.astro
+│   │   ├── posts
+│   │   │   └── your-post-title.md
+│   │   └── posts.astro
+│   └── styles
+│       └── global.css
 ├── tailwind.config.mjs
 └── tsconfig.json
-└── tsconfig.json
+```
 
 
 ## 1.6. Comandos 🧞‍♂️
