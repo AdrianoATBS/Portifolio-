@@ -1,92 +1,62 @@
 export const info = {
-  name: "Bart Simpson",
+  name: "Adriano Teixeira Benevenuto Sampaio",
   brief_description:
-    "I'm a mischievous full stack developer with a knack for troublemaking.",
-  role: "Full Stack Developer",
+    "Desenvolvedor de software, apaixonado por tecnologia e por criar soluções eficientes.",
+  role: "Desenvolvedor de Software",
   picture: "/pic.png",
-  picture_alt: "Bart Simpson",
-  location: "Springfield, USA",
+  picture_alt: "Adriano Sampaio",
+  location: "Rio de Janeiro, Brasil",
   cv: "/resume.pdf",
 
   about: {
-    description: `I'm a full stack developer with a passion for causing a little chaos in web development.
-    I have a solid foundation in computer science, although I prefer skateboarding over studying.
-    I excel in building web applications using React, Node.js, and MongoDB.
-    I'm known for my sharp wit and quick thinking, traits that serve me well in coding and pranks alike.
-    Looking for a challenge? Let's create something memorable together.`,
+    description: `Sou desenvolvedor de software com foco em construir soluções inteligentes e funcionais. 
+    Tenho habilidades em Clean Architecture, SOLID, e desenvolvimento de APIs REST. 
+    Durante meus estudos e projetos, desenvolvi não apenas competências técnicas, 
+    mas também a capacidade de colaborar em equipe, seguindo metodologias ágeis como Scrum. 
+    Além de programar, sou apaixonado por leitura, especialmente de fantasia, 
+    e acredito que a criatividade alimenta a inovação. 
+    Vamos criar algo incrível juntos?`,
+    
     education: [
       {
-        title: "Self-Taught Developer Extraordinaire",
-        date: "2000 - Present",
-        location: "Springfield Elementary School of Hard Knocks",
-        gpa: "4.0 (A+ in Pranks)",
-        thesis: "The Art of Subverting Expectations: A Practical Guide",
+        title: "Análise e Desenvolvimento de Sistemas",
+        date: "2023 - Atual",
+        location: "Faculdade/Universidade",
+        description: "Cursando 3º Semestre", 
       },
     ],
+    
     experience: [
       {
-        title: "Frontend Developer",
-        date: "2015 - Present",
-        location: "Krusty Burger Web Dev",
+        title: "Desenvolvedor Back-End - App Escolar",
+        date: "2024",
+        location: "Projeto Acadêmico",
         description:
-          "Crafted interactive web experiences using React and Redux. Often multitasked between coding and avoiding Principal Skinner.",
-      },
-      {
-        title: "Backend Bandit",
-        date: "2013 - 2015",
-        location: "Comic Book Guy's Software Emporium",
-        description:
-          "Masterminded backend solutions using Node.js and MongoDB. Surprisingly good at debugging, considering my history of causing bugs.",
-      },
-      {
-        title: "Junior Hacker",
-        date: "2010 - 2013",
-        location: "Springfield Elementary Cyber Club",
-        description:
-          "Pioneered early web exploits, leading the club in daring coding escapades. Was disciplined for hacking the school's grading system.",
+          "Colaborei no desenvolvimento do back-end de um aplicativo escolar voltado para neurodivergentes. Atuei na criação de APIs REST, integração com banco de dados SQL e implementação de boas práticas como TDD e SOLID.",
       },
     ],
 
-    skills: ["JavaScript", "React", "Node.js", "MongoDB", "Prank Mastery"], // not used yet
+    skills: ["C#", ".NET", "Clean Architecture", "SQL", "Docker", "Git"], 
   },
 
   projects: [
     {
-      title: "Bart's Prank Portfolio",
+      title: "App Escolar para Neurodivergentes",
       date: "2024",
       description:
-        "An interactive portfolio website showcasing my mischievous coding projects.",
-      link: "https://github.com/bartsimpsonfake/prank-portfolio",
-      tech: ["React", "Node.js", "MongoDB", "Sarcasm.js"],
-      img_alt: "Bart's Portfolio",
-      img_path: "/simpsons.png",
-    },
-    {
-      title: "Skateboard Shop",
-      date: "2023",
-      description:
-        "An e-commerce site selling skateboards and prank supplies. No bullies allowed!",
-      link: "https://github.com/bartsimpsonfake/skate-shop",
-      tech: ["React", "Node.js", "MongoDB", "Skateboard.js"],
-      img_alt: "Skateboard Shop",
-      img_path: "skateboard.png",
-    },
-    {
-      title: "Comic Book Club",
-      date: "2022",
-      description:
-        "A platform for comic book enthusiasts to discuss and share their collections.",
-      link: "https://github.com/bartsimpsonfake/comic-club",
-      tech: ["React", "Node.js", "MongoDB", "Comic.js"],
-      img_alt: "Comic Book Club",
-      img_path: "comics.png",
+        "Aplicativo voltado para auxiliar estudantes neurodivergentes em sua jornada acadêmica.",
+      link: "https://github.com/AdrianoATBS/kognito-backend",
+      tech: ["C#", ".NET", "SQL", "Clean Architecture"],
+      img_alt: "App Escolar",
+      img_path: "/app-escolar.png",
+      target: "_blank"
     },
   ],
 
   contact: {
-    email: "bart@thesimpsons.com",
-    linkedin: "https://www.linkedin.com/in/bartsimpsonfake",
-    github: "https://www.github.com/gio-del",
-    twitter: "https://www.twitter.com/bartsimpsonfake",
+    email: "tiadrianoteixeira1223@gmail.com",
+    linkedin: "https://www.linkedin.com/in/adriano-teixeira-benevenuto-sampaio-236151330/",
+    github: "https://github.com/AdrianoATBS",
+
   },
 };

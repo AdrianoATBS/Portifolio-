@@ -31,6 +31,7 @@ export default function ProjectCard(props: ProjectCardProps) {
           <p className="text-sm font-medium text-text dark:text-dk-text">
             <a
               href={project.link}
+              target="_blank"
               rel="noreferrer"
               className="hover:underline"
               aria-label="Title of the project, click to open the project page"
@@ -40,6 +41,7 @@ export default function ProjectCard(props: ProjectCardProps) {
           </p>
           <a
             href={project.link}
+            target="_blank"
             rel="noreferrer"
             className="block mt-2"
             aria-label="Description of the project, click to open the project page"

@@ -1,7 +1,7 @@
 ---
 import Nav from "../components/navbar/Nav";
 import TopButton from "../components/TopButton";
-import Pointer from "../components/Pointer";
+
 
 const { title } = Astro.props;
 const posts = await Astro.glob("../pages/posts/*.md");
@@ -10,24 +10,19 @@ import "../styles/global.css";
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta
       name="description"
-      content="A portfolio website for a software developer"
+      content="Portfólio de desenvolvedor de software"
     />
-    <meta name="keywords" content="portfolio, software, developer" />
-    <meta name="author" content="Your Name" />
+    <meta name="keywords" content="portfolio, desenvolvedor, software" />
+    <meta name="author" content="Adriano Sampaio" /> <!-- Coloque seu nome aqui -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link
-      rel="alternate"
-      type="application/rss+xml"
-      title="Your Site's Title"
-      href={`${Astro.site}rss.xml`}
-    />
-    <meta name="generator" content={Astro.generator} />
+    
+    <!-- Font Awesome -->
     <script type="text/javascript">
       (function () {
         var css = document.createElement("link");
@@ -41,19 +36,19 @@ import "../styles/global.css";
         document.head.appendChild(css);
       })();
     </script>
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
-    <link
-      href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"
-      rel="stylesheet"
-    />
+
     <title>{title}</title>
+
+    <!-- Theme Script -->
     <script>
-      // On page load or when changing themes, best to add inline in `head` to avoid FOUC
       if (
         localStorage.getItem("theme") === "dark" ||
         (!("theme" in localStorage) &&
@@ -71,6 +66,6 @@ import "../styles/global.css";
       <slot />
     </div>
     <TopButton client:only />
-    <Pointer client:only />
+
   </body>
 </html>

@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import ToggleDarkMode from "../ToggleDarkMode";
-import Search from "../search/Search";
 import Hamburger from "./Hamburger";
 import { info } from "../../data/info";
 
@@ -8,10 +7,9 @@ export default function Nav({ posts }) {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   const navLinks = [
-    { name: "About", href: "/#about" },
-    { name: "Projects", href: "/#projects" },
-    { name: "Blog", href: "/#blog" },
-    { name: "Contact", href: "/#contact" },
+    { name: "Sobre mim", href: "/#about" },
+    { name: "Projetos", href: "/#projects" },
+    { name: "Contato", href: "/#contact" },
   ];
 
   const extractInitials = (name) => {
@@ -29,21 +27,8 @@ export default function Nav({ posts }) {
         <div className="w-full px-6 py-2 flex justify-between items-center">
           <a className="font-bold text-2xl lg:text-4xl" href="/#">
             <span className="text-secondary dark:text-dk-secondary">
-              {"</" + extractInitials(info.name) + ">"}
+              {"" + extractInitials(info.name) + ""}
             </span>
-          </a>
-
-          {/* Button for CV download */}
-          <a
-            href={info.cv}
-            download
-            className="px-4 py-2 border-2 rounded text-secondary dark:text-dk-secondary border-secondary dark:border-dk-secondary hover:bg-secondary dark:hover:bg-dk-secondary hover:text-primary dark:hover:text-primary cursor-pointer"
-          >
-            <i className="fas fa-download mr-2"></i>
-            <span className="hidden lg:inline-block font-medium">
-              Download CV
-            </span>
-            <span className="lg:hidden font-medium">CV</span>
           </a>
 
           <div className="inline-flex lg:hidden text-secondary dark:text-dk-secondary">
@@ -64,9 +49,6 @@ export default function Nav({ posts }) {
               ))}
               <li className="px-4 flex">
                 <ToggleDarkMode />
-              </li>
-              <li className="px-4 flex">
-                <Search posts={posts} />
               </li>
             </ul>
           </div>
@@ -89,7 +71,6 @@ export default function Nav({ posts }) {
             ))}
             <li className="p-4 flex flex-row items-center justify-evenly">
               <ToggleDarkMode />
-              <Search posts={posts} />
             </li>
           </ul>
         </div>

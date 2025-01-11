@@ -4,21 +4,24 @@ import typography from '@tailwindcss/typography';
 export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
-		extend: {
-			colors: {
-				'primary': '#FFF',
-				'secondary': '#1D4CC4',
-				'accent': '#0D2563',
-				'text': '#353755',
-				'dk-primary': '#0C2432',
-				'dk-secondary': '#53C6FF',
-				'dk-accent': '#55C2C3',
-				'dk-text': '#C8DCF5',
-			},
+	  extend: {
+		colors: {
+		  // Modo Claro
+		  'primary': '#FFFFFF',      
+		  'secondary': '#6366F1',    
+		  'accent': '#4338CA',       // Cor mais escura para hover
+		  'text': '#334155',         
+		  
+		  // Modo Escuro
+		  'dk-primary': '#0F172A',   
+		  'dk-secondary': '#818CF8', 
+		  'dk-accent': '#C7D2FE',    // Cor mais clara para hover no dark mode
+		  'dk-text': '#E2E8F0',      
 		},
+	  },
 	},
 	darkMode: 'class',
 	plugins: [
-		typography,
+	  typography,
 	],
-}
+  }
