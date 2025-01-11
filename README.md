@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 1. Astro Portfolio Template
 
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/gio-del/Astro-Portfolio-Template)
@@ -161,3 +162,6 @@ See the [CONTRIBUTING.md](CONTRIBUTING.md) file for more information.
 ## 1.9. License :memo:
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+=======
+# Portifolio-
+>>>>>>> 285163b45611eeb6ceaf1f8baa941a33b129f9a8
