@@ -35,10 +35,81 @@ Esta é uma versão adaptada do template original, com foco em desenvolvedores b
 - Otimização para projetos de backend
 
 ## 1.4. Como usar este modelo 🧰
-[Mantido o conteúdo original da seção "Como usar"]
+Nota: este mini-guia pressupõe que você tenha npminstalado em sua máquina, caso contrário, você pode baixá-lo seguindo as instruções aqui
+
+Clique no botão "Usar este modelo" na parte superior do repositório.
+Crie um novo repositório com base neste modelo.
+Clone o repositório para sua máquina local.
+Instale as dependências executandonpm install
+Agora você pode iniciar o servidor de desenvolvimento executando npm run dev(veja esta seção para mais comandos)
+Agora você pode começar a personalizar o modelo de portfólio atualizando o /data/info.tsarquivo com suas informações pessoais.
+1.4.1. Notas sobre a seção de contato 📧
+Se você adicionar/remover algo da seção de contato no info.tsarquivo, precisará atualizar o Contact.tsxarquivo localizado no src/components/contact_sectiondiretório simplesmente refletindo as alterações feitas no info.tsarquivo. Embora essa escolha possa parecer redundante, ela permite separar os dados da visualização.
+
+1.4.2. Notas sobre o feed RSS 📰
+O feed RSS é gerado usando o astro-plugin-feedplugin.
+
+Para personalizá-lo:
+
+Atualize a siteentrada no astro.config.mjsarquivo com a URL do seu site.
+Modifique o rss.xml.jsarquivo localizado no pagesdiretório para refletir as informações do seu site.
+1.4.3. Notas sobre SEO 🤖
+Modifique a seção head do BaseLayout.astroarquivo localizado no src/layoutsdiretório para refletir as informações do seu site.
+
+1.4.4. Notas sobre estilos 🎨
+Este modelo de portfólio usa Tailwind CSS para estilização. Você pode modificar as cores usadas no portfólio atualizando o tailwind.config.jsarquivo localizado na raiz do projeto.
 
 ## 1.5. Estrutura do Projeto 📁
-[Mantida a estrutura original do template]
+1.5. Estrutura do Projeto 🚀
+Dentro deste modelo de portfólio, você encontrará os seguintes arquivos e diretórios:
+
+.
+├── astro.config.mjs
+├── LICENSE
+├── package.json
+├── package-lock.json
+├── public
+│   ├── favicon.svg
+│   ├── pic.jpg
+│   └── Resume.pdf
+├── README.md
+├── src
+│   ├── components
+│   │   ├── about_section
+│   │   │   ├── About.tsx
+│   │   │   ├── Education.tsx
+│   │   │   └── Experience.tsx
+│   │   ├── contact_section
+│   │   │   └── Contact.tsx
+│   │   ├── navbar
+│   │   │   ├── Hamburger.tsx
+│   │   │   └── Nav.jsx
+│   │   ├── post_section
+│   │   │   ├── Blog.astro
+│   │   │   └── Post.astro
+│   │   ├── projects_section
+│   │   │   ├── ProjectCard.tsx
+│   │   │   └── ProjectCarousel.tsx
+│   │   ├── search
+│   │   │   └── Search.tsx
+│   │   ├── ToggleDarkMode.jsx
+│   │   └── TopButton.jsx
+│   ├── data
+│   │   └── info.ts
+│   ├── env.d.ts
+│   ├── layouts
+│   │   ├── BaseLayout.astro
+│   │   └── PostLayout.astro
+│   ├── pages
+│   │   ├── index.astro
+│   │   ├── posts
+│   │   │   └── your-post-title.md
+│   │   └── posts.astro
+│   └── styles
+│       └── global.css
+├── tailwind.config.mjs
+└── tsconfig.json
+
 
 ## 1.6. Comandos 🧞‍♂️
 | Comando | Ação |
