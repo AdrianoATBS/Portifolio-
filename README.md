@@ -35,29 +35,43 @@ Esta é uma versão adaptada do template original, com foco em desenvolvedores b
 - Otimização para projetos de backend
 
 ## 1.4. Como usar este modelo 🧰
-Nota: este mini-guia pressupõe que você tenha npminstalado em sua máquina, caso contrário, você pode baixá-lo seguindo as instruções aqui
 
-Clique no botão "Usar este modelo" na parte superior do repositório.
-Crie um novo repositório com base neste modelo.
-Clone o repositório para sua máquina local.
-Instale as dependências executandonpm install
-Agora você pode iniciar o servidor de desenvolvimento executando npm run dev(veja esta seção para mais comandos)
-Agora você pode começar a personalizar o modelo de portfólio atualizando o /data/info.tsarquivo com suas informações pessoais.
-1.4.1. Notas sobre a seção de contato 📧
-Se você adicionar/remover algo da seção de contato no info.tsarquivo, precisará atualizar o Contact.tsxarquivo localizado no src/components/contact_sectiondiretório simplesmente refletindo as alterações feitas no info.tsarquivo. Embora essa escolha possa parecer redundante, ela permite separar os dados da visualização.
+> **Nota**: Este guia pressupõe que você tenha `npm` instalado em sua máquina. Caso contrário, você pode baixá-lo seguindo as instruções [aqui](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm).
 
-1.4.2. Notas sobre o feed RSS 📰
-O feed RSS é gerado usando o astro-plugin-feedplugin.
+1. Clique no botão "Use this template" na parte superior do repositório
+2. Crie um novo repositório com base neste modelo
+3. Clone o repositório para sua máquina local
+4. Instale as dependências:
+   ```bash
+   npm install
+   ```
+5. Inicie o servidor de desenvolvimento:
+   ```bash
+   npm run dev
+   ```
+6. Personalize o portfólio atualizando o arquivo `/data/info.ts` com suas informações
 
-Para personalizá-lo:
+### 1.4.1. Notas sobre a seção de contato 📧
+Para modificar a seção de contato:
+1. Edite o arquivo `info.ts`
+2. Atualize o `Contact.tsx` em `src/components/contact_section`
 
-Atualize a siteentrada no astro.config.mjsarquivo com a URL do seu site.
-Modifique o rss.xml.jsarquivo localizado no pagesdiretório para refletir as informações do seu site.
-1.4.3. Notas sobre SEO 🤖
-Modifique a seção head do BaseLayout.astroarquivo localizado no src/layoutsdiretório para refletir as informações do seu site.
+Esta separação entre dados (`info.ts`) e visualização (`Contact.tsx`) permite melhor manutenção do código.
 
-1.4.4. Notas sobre estilos 🎨
-Este modelo de portfólio usa Tailwind CSS para estilização. Você pode modificar as cores usadas no portfólio atualizando o tailwind.config.jsarquivo localizado na raiz do projeto.
+### 1.4.2. Notas sobre o feed RSS 📰
+O feed RSS é gerado usando o `astro-plugin-feed`. Para personalizar:
+
+1. Atualize a entrada `site` em `astro.config.mjs` com sua URL
+2. Modifique `rss.xml.js` em `pages` com suas informações
+
+### 1.4.3. Notas sobre SEO 🤖
+Atualize as informações SEO no arquivo `BaseLayout.astro` em `src/layouts`.
+
+### 1.4.4. Notas sobre estilos 🎨
+O projeto usa Tailwind CSS. Personalize as cores no arquivo `tailwind.config.js` na raiz.
+
+## 1.5. Estrutura do Projeto 📁
+
 
 ## 1.5. Estrutura do Projeto 📁
 1.5. Estrutura do Projeto 🚀
