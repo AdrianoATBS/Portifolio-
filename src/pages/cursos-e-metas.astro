@@ -16,7 +16,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         <h3 class="text-2xl font-semibold text-secondary dark:text-dk-secondary mb-6">Certificados</h3>
         
         <div class="relative mb-6">
-          <p class="text-lg text-text dark:text-dk-text mb-4 cursor-pointer" onclick="togglePopup('curso1')">
+          <p class="text-xl font-semibold text-text dark:text-dk-text mb-4 cursor-pointer" onclick="togglePopup('curso1')">
             Curso de Python Completo - Danki Code
           </p>
           <div id="curso1" 
@@ -43,12 +43,13 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         </div>
 
         <div class="relative mb-6">
-          <p class="text-lg text-text dark:text-dk-text mb-4 cursor-pointer" onclick="togglePopup('curso2')">
+          <p class="text-xl font-semibold text-text dark:text-dk-text mb-4 cursor-pointer" onclick="togglePopup('curso2')">
             Curso Webmaster Front-End Completo - Danki Code
           </p>
           <div id="curso2" 
                class="opacity-0 invisible absolute z-10 bg-white dark:bg-dk-primary p-4 rounded-lg shadow-lg text-left -mt-2 transition-all duration-700">
             <p class="text-sm text-text dark:text-dk-text mb-2">Data de Conclusão: Abril de 2024</p>
+            <p class="text-sm text-text dark:text-dk-text mb-2">Carga Horária: 81 Horas</p>
             <div class="flex items-center space-x-2 mb-2">
               <p class="text-sm text-text dark:text-dk-text">Código:</p>
               <button 
@@ -69,13 +70,15 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         </div>
 
         <div class="relative mb-6">
-          <p class="text-lg text-text dark:text-dk-text mb-4 cursor-pointer" onclick="togglePopup('curso3')">
+          <p class="text-xl font-semibold text-text dark:text-dk-text mb-4 cursor-pointer" onclick="togglePopup('curso3')">
             Introdução ao Entity Framework Core - Desenvolvedor.io
           </p>
           <div id="curso3" 
                class="opacity-0 invisible absolute z-10 bg-white dark:bg-dk-primary p-4 rounded-lg shadow-lg text-left -mt-2 transition-all duration-700">
             <p class="text-sm text-text dark:text-dk-text mb-2">Data de Conclusão: Agosto de 2024</p>
+            <p class="text-sm text-text dark:text-dk-text mb-2">Carga Horária: 3 Horas</p>
             <div class="flex items-center space-x-2 mb-2">
+            
               <p class="text-sm text-text dark:text-dk-text">Código:</p>
               <button 
                 class="text-sm bg-secondary/10 px-2 py-1 rounded hover:bg-secondary/20 transition-colors"
@@ -95,7 +98,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         </div>
 
         <div class="relative mb-6">
-          <p class="text-lg text-text dark:text-dk-text mb-4 cursor-pointer" onclick="togglePopup('curso4')">
+          <p class="text-xl font-semibold text-text dark:text-dk-text mb-4 cursor-pointer" onclick="togglePopup('curso4')">
             Desenvolvimento Backend - Estartando Devs
           </p>
           <div id="curso4" 
@@ -113,7 +116,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         <h3 class="text-2xl font-semibold text-secondary dark:text-dk-secondary mb-6">Planejamento</h3>
         
         <div class="relative mb-6">
-          <p class="text-xl font-semibold text-secondary dark:text-dk-secondary mb-4 cursor-pointer" onclick="togglePopup('meta1')">
+          <p class="text-xl font-semibold text-text dark:text-dk-text mb-4 cursor-pointer" onclick="togglePopup('meta1')">
             Metas de 6 meses a 1 ano
           </p>
           <div id="meta1" class="opacity-0 invisible absolute z-10 bg-white dark:bg-dk-primary p-4 rounded-lg shadow-lg text-left -mt-2 transition-all duration-700">
@@ -126,7 +129,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         </div>
 
         <div class="relative mb-6">
-          <p class="text-xl font-semibold text-secondary dark:text-dk-secondary mb-4 cursor-pointer" onclick="togglePopup('meta2')">
+          <p class="text-xl font-semibold text-text dark:text-dk-text mb-4 cursor-pointer" onclick="togglePopup('meta2')">
             Metas de 1 a 3 anos
           </p>
           <div id="meta2" class="opacity-0 invisible absolute z-10 bg-white dark:bg-dk-primary p-4 rounded-lg shadow-lg text-left -mt-2 transition-all duration-700">
@@ -139,7 +142,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         </div>
 
         <div class="relative mb-6">
-          <p class="text-xl font-semibold text-secondary dark:text-dk-secondary mb-4 cursor-pointer" onclick="togglePopup('meta3')">
+          <p class="text-xl font-semibold text-text dark:text-dk-text mb-4 cursor-pointer" onclick="togglePopup('meta3')">
             Metas de 3 a 5 anos
           </p>
           <div id="meta3" class="opacity-0 invisible absolute z-10 bg-white dark:bg-dk-primary p-4 rounded-lg shadow-lg text-left -mt-2 transition-all duration-700">
@@ -151,13 +154,13 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         </div>
 
         <div class="relative mb-6">
-          <p class="text-xl font-semibold text-secondary dark:text-dk-secondary mb-4 cursor-pointer" onclick="togglePopup('metasConcluidas')">
+          <p class="text-xl font-semibold text-text dark:text-dk-text mb-4 cursor-pointer" onclick="togglePopup('metasConcluidas')">
             Metas Concluídas
           </p>
           <div id="metasConcluidas" class="opacity-0 invisible absolute z-10 bg-white dark:bg-dk-primary p-4 rounded-lg shadow-lg text-left -mt-2 transition-all duration-700">
             <p class="text-sm text-text dark:text-dk-text mb-2">• Iniciar graduação em <strong>Análise e Desenvolvimento de Sistemas</strong></p>
             <p class="text-sm text-text dark:text-dk-text mb-2">• Concluir curso de <strong>Desenvolvimento Backend</strong> no Estartando Devs</p>
-            <p class="text-sm text-text dark:text-dk-text">• Desenvolver primeiro projeto full-stack (<strong>Kognito</strong>)</p>
+            <p class="text-sm text-text dark:text-dk-text">• Desenvolver primeiro em equipe (<strong>Kognito</strong>)</p>
           </div>
         </div>
       </div>

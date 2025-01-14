@@ -10,15 +10,15 @@ export default {
         'primary': '#ffffff', // Branco puro
         'secondary': '#b87333', // Bronze
         'background': '#f8f9fa', // Cinza muito claro
-        'card-background': '#f5f5f5', // Branco levemente acinzentado para cards
+        'card-background': '#FFFFF0', // Branco levemente acinzentado para cards
         'text': '#000000', // Preto puro
         'text-secondary': '#2d3748', // Cinza escuro
 
         // Tema Escuro
         'dk-primary': '#000000', // Preto puro
-        'dk-secondary': '#cd7f32', // Bronze mais escuro
+        'dk-secondary': '#b87333', // Bronze mais escuro
         'dk-background': '#0a0a0a', // Preto mais profundo
-        'dk-card-background': '#0f0f0f', // Preto um pouco mais claro que o fundo
+        'dk-card-background': '#1A1A1A', // Preto um pouco mais claro que o fundo
         'dk-text': '#ffffff', // Branco puro
         'dk-text-secondary': '#e2e8f0', // Cinza muito claro
       },
