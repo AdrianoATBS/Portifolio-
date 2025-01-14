@@ -46,7 +46,7 @@ const allPosts = await Astro.glob("./posts/*.md");
               "Curso Webmaster Front-End Completo - Danki Code",
               "Introdução ao Entity Framework Core - Desenvolvedor.io",
               "Desenvolvimento Backend - Estartando Devs"].map((curso) => (
-              <div class="bg-[#f5f5f5] dark:bg-[#0f0f0f] p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+              <div class="bg-card-background dark:bg-dk-card-background p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
                 <p class="text-lg text-text dark:text-dk-text">{curso}</p>
               </div>
             ))}
@@ -57,12 +57,11 @@ const allPosts = await Astro.glob("./posts/*.md");
           <h2 class="text-2xl font-semibold text-secondary dark:text-dk-secondary mb-4">Minhas Metas</h2>
           <div class="grid gap-4">
             {["Aperfeiçoar habilidades em C#, .NET e Clean Architecture",
-              "Alcançar nível intermediário em inglês",
+              "Trabalhar em projetos pessoais ou acadêmicos",
               "Concluir graduação em ADS",
-              "Iniciar pós em Engenharia de Software",
-              "Tornar-me referência em desenvolvimento back-end",
-              "Consolidar carreira em liderança técnica"].map((meta) => (
-              <div class="bg-[#f5f5f5] dark:bg-[#0f0f0f] p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+              "Conquistar meu primeiro emprego como Desenvolvedor de Software",
+              ].map((meta) => (
+              <div class="bg-card-background dark:bg-dk-card-background p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
                 <p class="text-lg text-text dark:text-dk-text">{meta}</p>
               </div>
             ))}
@@ -79,7 +78,7 @@ const allPosts = await Astro.glob("./posts/*.md");
       <h2 class="text-3xl font-semibold text-secondary dark:text-dk-secondary mb-8">Projetos em Destaque</h2>
       
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full mb-8">
-        <div class="bg-[#f5f5f5] dark:bg-[#0f0f0f] p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+        <div class="bg-card-background dark:bg-dk-card-background p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
           <h3 class="text-xl font-semibold text-secondary dark:text-dk-secondary mb-2">Kognito</h3>
           <p class="text-lg text-text dark:text-dk-text mb-4">App Escolar para Neurodivergentes</p>
           <p class="text-sm text-text dark:text-dk-text mb-4">
