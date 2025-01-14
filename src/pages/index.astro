@@ -1,77 +1,127 @@
 ---
-// src/pages/index.astro
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { info } from "../data/info";
 import Contact from "../components/contact_section/Contact";
 import About from "../components/about_section/About";
-import Projects from "../components/projects_section/Projects"; // Importando o componente de Projetos
+import Projects from "../components/projects_section/Projects";
 import { Image } from "astro:assets";
 
 const allPosts = await Astro.glob("./posts/*.md");
 ---
 
 <BaseLayout title="Home">
-  <section class="lg:h-screen lg:m-0 my-20 mx-2 bg-primary dark:bg-dk-primary" id="home"> <!-- Azul petróleo -->
-    <div class="flex flex-col lg:flex-row justify-center items-center h-full space-y-4">
-      <div class="profile-pic">
-        <Image
-          src={info.picture}
-          alt={info.picture_alt}
-          width={200}
-          height={200}
-          class="lg:h-96 lg:w-96 h-40 w-40 rounded-full object-fill object-center shadow-lg"
-        />
-      </div>
+  <div class="container mx-auto px-4">
+    <section class="lg:h-screen lg:m-0 my-20 mx-2 bg-primary dark:bg-dk-primary flex items-center justify-center" id="inicio">
+      <div class="flex flex-col lg:flex-row justify-center items-center h-full space-y-4">
+        <div class="profile-pic">
+          <Image
+            src={info.picture}
+            alt={info.picture_alt}
+            width={200}
+            height={200}
+            class="lg:h-96 lg:w-96 h-40 w-40 rounded-full object-fill object-center shadow-lg"
+          />
+        </div>
 
-      <div class="flex flex-col lg:mx-8 leading-relaxed space-y-4 text-text dark:text-dk-text">
-        <h1 class="text-3xl lg:text-5xl font-bold font-serif text-secondary dark:text-dk-secondary">
-          Olá, eu sou <span class="bg-clip-text animate-pulse typewriter text-secondary dark:text-dk-secondary">{info.name}</span>
-        </h1>
+        <div class="flex flex-col lg:mx-8 leading-relaxed space-y-4 text-text dark:text-dk-text">
+          <h1 class="text-3xl lg:text-5xl font-bold font-serif text-secondary dark:text-dk-secondary">
+            Olá, eu sou <span class="bg-clip-text animate-pulse typewriter text-secondary dark:text-dk-secondary">{info.name}</span>
+          </h1>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
   
-  <section class="lg:m-0 my-20 mx-2" id="about">
-    <About about={info.about} client:visible />
-  </section>
+    <section class="lg:m-0 my-20 mx-2 flex justify-center" id="sobre">
+      <About about={info.about} client:visible />
+    </section>
 
-  <!-- Seção de Meus Cursos e Minhas Metas -->
-   <section class="flex flex-col justify-center items-center h-full space-y-6 bg-background dark:bg-dk-primary p-8 rounded-lg shadow-lg">
-    <h1 class="text-4xl font-bold text-primary dark:text-dk-secondary mb-4">Cursos e Metas</h1>
-    
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full text-center"> 
-      <div class="text-center">
-        <h2 class="text-2xl font-semibold text-secondary dark:text-dk-secondary mb-4">Meus Cursos</h2>
-        <p class="text-lg text-text dark:text-dk-text">Curso de Python Completo - Danki Code</p>
-        <p class="text-lg text-text dark:text-dk-text">Curso Webmaster Front-End Completo - Danki Code</p>
-        <p class="text-lg text-text dark:text-dk-text">Introdução ao Entity Framework Core - Desenvolvedor.io</p>
-        <p class="text-lg text-text dark:text-dk-text">Desenvolvimento Backend - Estartando Devs</p>
+    <section id="cursos-metas" class="flex flex-col justify-center items-center h-full space-y-6 bg-background dark:bg-dk-primary p-8 rounded-lg shadow-lg scroll-mt-16 max-w-6xl mx-auto">
+      <h1 class="text-4xl font-bold text-primary dark:text-dk-secondary mb-4">Cursos e Metas</h1>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full text-center"> 
+        <div class="text-center">
+          <h2 class="text-2xl font-semibold text-secondary dark:text-dk-secondary mb-4">Meus Cursos</h2>
+          <div class="grid gap-4">
+            {["Curso de Python Completo - Danki Code", 
+              "Curso Webmaster Front-End Completo - Danki Code",
+              "Introdução ao Entity Framework Core - Desenvolvedor.io",
+              "Desenvolvimento Backend - Estartando Devs"].map((curso) => (
+              <div class="bg-[#f5f5f5] dark:bg-[#0f0f0f] p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                <p class="text-lg text-text dark:text-dk-text">{curso}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div class="text-center">
+          <h2 class="text-2xl font-semibold text-secondary dark:text-dk-secondary mb-4">Minhas Metas</h2>
+          <div class="grid gap-4">
+            {["Aperfeiçoar habilidades em C#, .NET e Clean Architecture",
+              "Alcançar nível intermediário em inglês",
+              "Concluir graduação em ADS",
+              "Iniciar pós em Engenharia de Software",
+              "Tornar-me referência em desenvolvimento back-end",
+              "Consolidar carreira em liderança técnica"].map((meta) => (
+              <div class="bg-[#f5f5f5] dark:bg-[#0f0f0f] p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                <p class="text-lg text-text dark:text-dk-text">{meta}</p>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
 
-      <div class="text-center">
-        <h2 class="text-2xl font-semibold text-secondary dark:text-dk-secondary mb-4" ">Minhas Metas</h2>
-        <p class="text-lg text-text dark:text-dk-text">Conquistar meu primeiro emprego como Desenvolvedor de Software.</p>
-        <p class="text-lg text-text dark:text-dk-text">Aprofundar meus conhecimentos em <strong>C# e .NET</strong>.</p>
-        <p class="text-lg text-text dark:text-dk-text">Alcançar fluência em inglês.</p>
-        <p class="text-lg text-text dark:text-dk-text">Aprender sobre <strong>cibersegurança</strong>.</p>
-        <p class="text-lg text-text dark:text-dk-text">Contribuir para projetos open source.</p>
-        <p class="text-lg text-text dark:text-dk-text">Participar de hackathons.</p>
+      <a href="/cursos-e-metas" class="bg-secondary text-white py-3 px-8 rounded-lg text-lg font-semibold transition duration-300 hover:bg-primary dark:hover:bg-dk-secondary mb-20 text-center">
+        Saber Mais
+      </a>
+    </section>
+
+    <section id="projetos" class="flex flex-col items-center max-w-6xl mx-auto my-20">
+      <h2 class="text-3xl font-semibold text-secondary dark:text-dk-secondary mb-8">Projetos em Destaque</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full mb-8">
+        <div class="bg-[#f5f5f5] dark:bg-[#0f0f0f] p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+          <h3 class="text-xl font-semibold text-secondary dark:text-dk-secondary mb-2">Kognito</h3>
+          <p class="text-lg text-text dark:text-dk-text mb-4">App Escolar para Neurodivergentes</p>
+          <p class="text-sm text-text dark:text-dk-text mb-4">
+            Plataforma educacional inclusiva com foco em alunos neurodivergentes, 
+            desenvolvida com C#, .NET e Angular.
+          </p>
+        </div>
+        <!-- Espaço para futuros projetos -->
       </div>
-    </div>
 
-    <a href="/cursos-e-metas" class="bg-secondary text-white py-2 px-6 rounded transition duration-300 hover:bg-primary dark:hover:bg-dk-secondary mb-20 text-center">
-      Saber Mais
-    </a>
-  </section>
+      <div class="text-center w-full">
+        <a href="/projetos" 
+           class="inline-block bg-secondary text-white py-3 px-8 rounded-lg text-lg font-semibold transition duration-300 hover:bg-primary dark:hover:bg-dk-secondary">
+          Ver Projetos
+        </a>
+      </div>
+    </section>
 
-
-  <section class="lg:m-0 my-20 mx-2" id="projects">
-    <Projects /> <!-- Integrando o componente de Projetos -->
-  </section>
-
-  <section class="lg:h-screen lg:m-0 my-20 mx-2 flex-col flex justify-center w-full bg-primary dark:bg-dk-primary">
-    <div class="flex flex-row justify-center items-center h-full space-y-4">
-      <Contact contact={info.contact} size="lg" />
-    </div>
-  </section>
+    <section class="lg:h-screen lg:m-0 my-20 mx-2 flex-col flex justify-center items-center w-full bg-primary dark:bg-dk-primary" id="contato">
+      <div class="flex flex-row justify-center items-center h-full space-y-4">
+        <Contact contact={info.contact} size="lg" />
+      </div>
+    </section>
+  </div>
 </BaseLayout>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href')?.substring(1);
+        if (targetId) {
+          const targetElement = document.getElementById(targetId);
+          if (targetElement) {
+            targetElement.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        }
+      });
+    });
+  });
+</script>

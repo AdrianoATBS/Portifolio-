@@ -1,0 +1,101 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Projetos">
+  <section class="min-h-screen flex flex-col justify-start items-center bg-background dark:bg-dk-primary p-8 rounded-lg shadow-lg">
+    <h2 class="text-3xl font-semibold text-secondary dark:text-dk-secondary text-center mb-8">Meus Projetos</h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
+      <div class="relative">
+        <div class="cursor-pointer p-4 rounded-lg bg-white dark:bg-dk-primary shadow-lg" onclick="toggleModal('kognitoModal')">
+          <h3 class="text-xl font-semibold text-secondary dark:text-dk-secondary mb-2">Kognito</h3>
+          <p class="text-lg text-text dark:text-dk-text">App Escolar para Neurodivergentes</p>
+        </div>
+
+        <!-- Modal com detalhes -->
+        <div id="kognitoModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden overflow-y-auto">
+          <div class="flex items-center justify-center min-h-screen p-4">
+            <div class="relative bg-white dark:bg-dk-primary p-6 rounded-lg shadow-xl max-w-2xl w-full m-4 max-h-[90vh] overflow-y-auto">
+              <!-- Botão de fechar -->
+              <button 
+                onclick="toggleModal('kognitoModal')" 
+                class="absolute top-4 right-4 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
+              >
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+              </button>
+
+              <div class="pr-8"> <!-- Padding right para evitar sobreposição com o botão de fechar -->
+                <h4 class="text-xl font-semibold text-secondary dark:text-dk-secondary mb-4">Kognito</h4>
+                <p class="text-sm text-text dark:text-dk-text mb-4">
+                  Plataforma educacional inclusiva desenvolvida como TCC em parceria com o Estartando Devs, 
+                  focada em criar um ambiente de aprendizado dinâmico para alunos neurodivergentes.
+                </p>
+                
+                <div class="mb-4">
+                  <h5 class="text-sm font-semibold text-secondary dark:text-dk-secondary mb-2">Equipe</h5>
+                  <p class="text-sm text-text dark:text-dk-text">• 4 desenvolvedores back-end</p>
+                  <p class="text-sm text-text dark:text-dk-text">• 4 desenvolvedores front-end</p>
+                  <p class="text-sm text-text dark:text-dk-text">• 2 designers</p>
+                </div>
+
+                <div class="mb-4">
+                  <h5 class="text-sm font-semibold text-secondary dark:text-dk-secondary mb-2">Minhas Contribuições</h5>
+                  <p class="text-sm text-text dark:text-dk-text">• Desenvolvimento da lógica de autenticação e gerenciamento de dados</p>
+                  <p class="text-sm text-text dark:text-dk-text">• Implementação de Clean Architecture</p>
+                  <p class="text-sm text-text dark:text-dk-text">• Integração com SQL Server</p>
+                </div>
+
+                <div class="mb-4">
+                  <h5 class="text-sm font-semibold text-secondary dark:text-dk-secondary mb-2">Funcionalidades</h5>
+                  <p class="text-sm text-text dark:text-dk-text">• Gerenciamento de turmas e tarefas</p>
+                  <p class="text-sm text-text dark:text-dk-text">• Monitoramento de desempenho</p>
+                  <p class="text-sm text-text dark:text-dk-text">• Sistema de gamificação</p>
+                </div>
+
+                <div class="mb-4">
+                  <h5 class="text-sm font-semibold text-secondary dark:text-dk-secondary mb-2">Tecnologias</h5>
+                  <p class="text-sm text-text dark:text-dk-text">• Back-end: C#, .NET, SQL Server, Clean Architecture, CQRS</p>
+                  <p class="text-sm text-text dark:text-dk-text">• Front-end: Angular com TypeScript</p>
+                </div>
+
+                <div class="mt-4 flex gap-4">
+                  <a href="https://github.com/AdrianoATBS/kognito-backend" 
+                     target="_blank" 
+                     class="text-white bg-secondary hover:bg-secondary/80 px-4 py-2 rounded">
+                    GitHub
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script is:inline>
+    function toggleModal(modalId) {
+      const modal = document.getElementById(modalId);
+      if (modal.classList.contains('hidden')) {
+        modal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden'; // Previne rolagem do body
+      } else {
+        modal.classList.add('hidden');
+        document.body.style.overflow = 'auto'; // Restaura rolagem do body
+      }
+    }
+
+    // Fecha o modal quando clicar fora dele
+    window.onclick = function(event) {
+      const modals = document.querySelectorAll('[id$="Modal"]');
+      modals.forEach(modal => {
+        if (event.target === modal) {
+          toggleModal(modal.id);
+        }
+      });
+    }
+  </script>
+</BaseLayout>

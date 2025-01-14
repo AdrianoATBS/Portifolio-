@@ -28,27 +28,43 @@ export default function Contact({ contact, size }: ContactProps) {
   ];
 
   return (
-    <div className="flex flex-col items-center">
-      <h1 className="text-3xl font-bold text-secondary dark:text-dk-secondary mb-4">Ajude-me com Conselhos</h1>
-      <p className="text-lg text-text dark:text-dk-text mb-4">
-        Estou sempre aberto a conselhos e colaborações. Sinta-se à vontade para entrar em contato!
+    <div className="flex flex-col items-center max-w-4xl mx-auto p-8">
+      <h1 className="text-4xl font-bold text-secondary dark:text-dk-secondary mb-6">Contato</h1>
+      <p className="text-xl text-text dark:text-dk-text mb-8 text-center">
+        Entre em contato através das minhas redes sociais
       </p>
-      <a href="/formulario" className="mt-4 bg-accent text-white py-2 px-4 rounded transition duration-300 hover:bg-secondary dark:hover:bg-dk-secondary">
-        Abrir Formulário
-      </a>
-      <div className="flex flex-row items-center container justify-around mt-4">
+      
+      {/* Social Media Links */}
+      <div className="flex flex-row items-center justify-center gap-12 mb-12">
         {socialMediaLinks.map((socialMedia, index) => (
           <a
             key={index}
             href={socialMedia.link}
             target="_blank"
             rel="noreferrer"
-            className={`text-white dark:text-dk-secondary hover:text-accent dark:hover:text-dk-accent ${size === "md" ? "text-3xl lg:text-4xl" : "text-5xl lg:text-9xl"}`}
+            className={`text-secondary dark:text-dk-secondary hover:text-accent dark:hover:text-dk-accent transition-all duration-300 ${
+              size === "md" ? "text-3xl lg:text-4xl" : "text-5xl lg:text-7xl"
+            }`}
             aria-label={socialMedia.link_alt}
           >
             <i className={socialMedia.icon}></i>
           </a>
         ))}
+      </div>
+
+      {/* Feedback Section */}
+      <div className="text-center mt-8">
+        <p className="text-lg text-text dark:text-dk-text mb-4">
+          Sua opinião é valiosa para meu desenvolvimento profissional
+        </p>
+        <a
+          href="https://forms.gle/diAEB3kbSi8p8hex8"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-secondary text-white py-3 px-8 rounded-lg text-lg font-medium transition duration-300 hover:bg-accent dark:hover:bg-dk-accent hover:shadow-lg"
+        >
+          Deixar Feedback
+        </a>
       </div>
     </div>
   );

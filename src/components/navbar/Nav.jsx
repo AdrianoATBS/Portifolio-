@@ -7,11 +7,11 @@ export default function Nav({ posts }) {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   const navLinks = [
-    { name: "Início", href: "/#home" },
-    { name: "Sobre Mim", href: "/#about" },
-    { name: "Cursos e Metas", href: "/#courses" },
-    { name: "Projetos", href: "/#projects" },
-    { name: "Contato", href: "/#contact" },
+    { name: "Início", href: "/#inicio" },
+    { name: "Sobre Mim", href: "/#sobre" },      // Alterado para rolagem
+    { name: "Cursos e Metas", href: "/#cursos-metas" },
+    { name: "Projetos", href: "/#projetos" },    // Alterado para rolagem
+    { name: "Contato", href: "/#contato" },
   ];
 
   const extractInitials = (name) => {

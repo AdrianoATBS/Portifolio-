@@ -28,11 +28,39 @@ Esta é uma versão adaptada do template original, com foco em desenvolvedores b
 - Feed RSS
 - Busca fuzzy para posts do blog
 
+[... início do README mantido igual ...]
+
 ### Modificações
 - Interface adaptada para português brasileiro
 - Simplificação da seção de educação
 - Personalização das cores e estilos
 - Otimização para projetos de backend
+- Adicionado grid system para múltiplos cards de projetos
+- Melhorado o sistema de alinhamento dos elementos
+- Aumentado o tamanho dos botões para melhor usabilidade
+- Centralização consistente em todas as seções
+- Preparado layout para adição de futuros projetos
+- Ajustado espaçamento entre seções
+- Implementado sistema de modais para detalhes dos projetos
+- Adicionada seção de Cursos e Metas
+- Melhorada a responsividade em dispositivos móveis
+- Otimizado carregamento de fontes e ícones
+- Personalizado tema dark/light
+- Adicionado componente de navegação suave
+- Implementado sistema de popups informativos
+- Melhorada a acessibilidade
+- Otimizado SEO com meta tags personalizadas
+- Reorganizada a estrutura de componentes
+- Implementado sistema de transições suaves
+- Melhorada a performance geral
+- Adicionado suporte a múltiplos idiomas (preparação)
+- Otimizado para diferentes tamanhos de tela
+- Implementado sistema de feedback visual
+- Melhorada a semântica HTML
+- Adicionado suporte a imagens otimizadas
+- Implementado sistema de cache eficiente
+- Melhorada a estrutura de dados do portfólio
+
 
 ## 1.4. Como usar este modelo 🧰
 

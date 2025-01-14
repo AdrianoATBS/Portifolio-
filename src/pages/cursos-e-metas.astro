@@ -4,27 +4,223 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout title="Cursos e Metas">
-  <section class="flex flex-col justify-center items-center h-full space-y-6 bg-background dark:bg-dk-primary p-8 rounded-lg shadow-lg">
+  <section class="min-h-screen flex flex-col justify-start items-center bg-background dark:bg-dk-primary p-8 rounded-lg shadow-lg">
+    <div class="flex justify-between w-full mb-8">
+      <h2 class="text-3xl font-semibold text-secondary dark:text-dk-secondary text-center">Cursos</h2>
+      <h2 class="text-3xl font-semibold text-secondary dark:text-dk-secondary text-center">Metas</h2>
+    </div>
     
-    
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full text-center"> <!-- Centralizando as divs -->
-      <div class="text-center"> <!-- Adicionando text-center aqui -->
-        <h2 className="text-2xl font-semibold text-secondary dark:text-dk-secondary mb-4">Meus Cursos</h2>
-        <p className="text-lg text-text dark:text-dk-text">Curso de Python Completo - Danki Code</p>
-        <p className="text-lg text-text dark:text-dk-text">Curso Webmaster Front-End Completo - Danki Code</p>
-        <p className="text-lg text-text dark:text-dk-text">Introdução ao Entity Framework Core - Desenvolvedor.io</p>
-        <p className="text-lg text-text dark:text-dk-text">Desenvolvimento Backend - Estartando Devs</p>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full text-center">
+      <!-- Coluna de Cursos -->
+      <div class="text-center">
+        <h3 class="text-2xl font-semibold text-secondary dark:text-dk-secondary mb-6">Certificados</h3>
+        
+        <div class="relative mb-6">
+          <p class="text-lg text-text dark:text-dk-text mb-4 cursor-pointer" onclick="togglePopup('curso1')">
+            Curso de Python Completo - Danki Code
+          </p>
+          <div id="curso1" 
+               class="opacity-0 invisible absolute z-10 bg-white dark:bg-dk-primary p-4 rounded-lg shadow-lg text-left -mt-2 transition-all duration-700">
+            <p class="text-sm text-text dark:text-dk-text mb-2">Data de Conclusão: Junho de 2024</p>
+            <p class="text-sm text-text dark:text-dk-text mb-2">Carga Horária: 25 horas</p>
+            <div class="flex items-center space-x-2 mb-2">
+              <p class="text-sm text-text dark:text-dk-text">Código:</p>
+              <button 
+                class="text-sm bg-secondary/10 px-2 py-1 rounded hover:bg-secondary/20 transition-colors"
+                onclick="copyToClipboard('eee4ac1d-0cd3-4343-bfce-16fcadf2f44b')"
+              >
+                eee4ac1d-0cd3-4343-bfce-16fcadf2f44b
+                <span class="ml-2 text-xs">📋</span>
+              </button>
+            </div>
+            <a href="https://cursos.dankicode.com/validate-certificate" 
+               class="inline-block text-white bg-secondary hover:bg-secondary/80 px-4 py-2 rounded transition-colors mt-2"
+               target="_blank"
+               rel="noopener noreferrer">
+              Validar Certificado
+            </a>
+          </div>
+        </div>
+
+        <div class="relative mb-6">
+          <p class="text-lg text-text dark:text-dk-text mb-4 cursor-pointer" onclick="togglePopup('curso2')">
+            Curso Webmaster Front-End Completo - Danki Code
+          </p>
+          <div id="curso2" 
+               class="opacity-0 invisible absolute z-10 bg-white dark:bg-dk-primary p-4 rounded-lg shadow-lg text-left -mt-2 transition-all duration-700">
+            <p class="text-sm text-text dark:text-dk-text mb-2">Data de Conclusão: Abril de 2024</p>
+            <div class="flex items-center space-x-2 mb-2">
+              <p class="text-sm text-text dark:text-dk-text">Código:</p>
+              <button 
+                class="text-sm bg-secondary/10 px-2 py-1 rounded hover:bg-secondary/20 transition-colors"
+                onclick="copyToClipboard('bbc35890-ae96-4128-ae9f-b3c5a9e05826')"
+              >
+                bbc35890-ae96-4128-ae9f-b3c5a9e05826
+                <span class="ml-2 text-xs">📋</span>
+              </button>
+            </div>
+            <a href="https://cursos.dankicode.com/validate-certificate" 
+               class="inline-block text-white bg-secondary hover:bg-secondary/80 px-4 py-2 rounded transition-colors mt-2"
+               target="_blank"
+               rel="noopener noreferrer">
+              Validar Certificado
+            </a>
+          </div>
+        </div>
+
+        <div class="relative mb-6">
+          <p class="text-lg text-text dark:text-dk-text mb-4 cursor-pointer" onclick="togglePopup('curso3')">
+            Introdução ao Entity Framework Core - Desenvolvedor.io
+          </p>
+          <div id="curso3" 
+               class="opacity-0 invisible absolute z-10 bg-white dark:bg-dk-primary p-4 rounded-lg shadow-lg text-left -mt-2 transition-all duration-700">
+            <p class="text-sm text-text dark:text-dk-text mb-2">Data de Conclusão: Agosto de 2024</p>
+            <div class="flex items-center space-x-2 mb-2">
+              <p class="text-sm text-text dark:text-dk-text">Código:</p>
+              <button 
+                class="text-sm bg-secondary/10 px-2 py-1 rounded hover:bg-secondary/20 transition-colors"
+                onclick="copyToClipboard('2de3e7d9-ef51-4758-b197-446004ec748c')"
+              >
+                2de3e7d9-ef51-4758-b197-446004ec748c
+                <span class="ml-2 text-xs">📋</span>
+              </button>
+            </div>
+            <a href="https://desenvolvedor.io/certificados/2de3e7d9-ef51-4758-b197-446004ec748c/validar" 
+               class="inline-block text-white bg-secondary hover:bg-secondary/80 px-4 py-2 rounded transition-colors mt-2"
+               target="_blank"
+               rel="noopener noreferrer">
+              Validar Certificado
+            </a>
+          </div>
+        </div>
+
+        <div class="relative mb-6">
+          <p class="text-lg text-text dark:text-dk-text mb-4 cursor-pointer" onclick="togglePopup('curso4')">
+            Desenvolvimento Backend - Estartando Devs
+          </p>
+          <div id="curso4" 
+               class="opacity-0 invisible absolute z-10 bg-white dark:bg-dk-primary p-4 rounded-lg shadow-lg text-left -mt-2 transition-all duration-700">
+            <p class="text-sm text-text dark:text-dk-text mb-2">Data de Conclusão: Dezembro de 2024</p>
+            <p class="text-sm text-text dark:text-dk-text mb-2">Carga Horária: 120 horas</p>
+            <p class="text-sm text-text dark:text-dk-text mb-2">Local: Rio de Janeiro</p>
+            <p class="text-sm text-gray-600 dark:text-gray-400">Tecnologias: C#, .NET, Clean Architecture, GIT, SQL, Docker, Testes Unitários, SOLID</p>
+          </div>
+        </div>
       </div>
 
-      <div class="text-center"> <!-- Adicionando text-center aqui -->
-        <h2 className="text-2xl font-semibold text-secondary dark:text-dk-secondary mb-4">Minhas Metas</h2>
-        <p className="text-lg text-text dark:text-dk-text">Conquistar meu primeiro emprego como Desenvolvedor de Software.</p>
-        <p className="text-lg text-text dark:text-dk-text">Aprofundar meus conhecimentos em <strong>C# e .NET</strong>.</p>
-        <p className="text-lg text-text dark:text-dk-text">Alcançar fluência em inglês.</p>
-        <p className="text-lg text-text dark:text-dk-text">Aprender sobre <strong>cibersegurança</strong>.</p>
-        <p className="text-lg text-text dark:text-dk-text">Contribuir para projetos open source.</p>
-        <p className="text-lg text-text dark:text-dk-text">Participar de hackathons.</p>
+      <!-- Coluna de Metas -->
+      <div class="text-center">
+        <h3 class="text-2xl font-semibold text-secondary dark:text-dk-secondary mb-6">Planejamento</h3>
+        
+        <div class="relative mb-6">
+          <p class="text-xl font-semibold text-secondary dark:text-dk-secondary mb-4 cursor-pointer" onclick="togglePopup('meta1')">
+            Metas de 6 meses a 1 ano
+          </p>
+          <div id="meta1" class="opacity-0 invisible absolute z-10 bg-white dark:bg-dk-primary p-4 rounded-lg shadow-lg text-left -mt-2 transition-all duration-700">
+            <p class="text-sm text-text dark:text-dk-text mb-2">• Aperfeiçoar minhas habilidades em <strong>C#, .NET, Clean Architecture, GIT, SQL, NoSQL, Docker, API REST, Testes Unitários</strong> e <strong>princípios SOLID</strong></p>
+            <p class="text-sm text-text dark:text-dk-text mb-2">• Participar de <strong>eventos e comunidades de tecnologia</strong></p>
+            <p class="text-sm text-text dark:text-dk-text mb-2">• Alcançar um nível <strong>básico ou intermediário em inglês</strong></p>
+            <p class="text-sm text-text dark:text-dk-text mb-2">• Trabalhar em <strong>projetos pessoais ou acadêmicos</strong></p>
+            <p class="text-sm text-text dark:text-dk-text">• Conquistar meu <strong>primeiro emprego como Desenvolvedor de Software</strong></p>
+          </div>
+        </div>
+
+        <div class="relative mb-6">
+          <p class="text-xl font-semibold text-secondary dark:text-dk-secondary mb-4 cursor-pointer" onclick="togglePopup('meta2')">
+            Metas de 1 a 3 anos
+          </p>
+          <div id="meta2" class="opacity-0 invisible absolute z-10 bg-white dark:bg-dk-primary p-4 rounded-lg shadow-lg text-left -mt-2 transition-all duration-700">
+            <p class="text-sm text-text dark:text-dk-text mb-2">• Concluir graduação em <strong>Análise e Desenvolvimento de Sistemas</strong></p>
+            <p class="text-sm text-text dark:text-dk-text mb-2">• Iniciar pós-graduação em <strong>Engenharia de Software</strong> ou <strong>Cibersegurança</strong></p>
+            <p class="text-sm text-text dark:text-dk-text mb-2">• Obter certificações relevantes (<strong>Microsoft Azure, AWS</strong>)</p>
+            <p class="text-sm text-text dark:text-dk-text mb-2">• Participar ativamente de projetos em equipe</p>
+            <p class="text-sm text-text dark:text-dk-text">• Aprofundar conhecimentos em <strong>arquitetura de sistemas</strong></p>
+          </div>
+        </div>
+
+        <div class="relative mb-6">
+          <p class="text-xl font-semibold text-secondary dark:text-dk-secondary mb-4 cursor-pointer" onclick="togglePopup('meta3')">
+            Metas de 3 a 5 anos
+          </p>
+          <div id="meta3" class="opacity-0 invisible absolute z-10 bg-white dark:bg-dk-primary p-4 rounded-lg shadow-lg text-left -mt-2 transition-all duration-700">
+            <p class="text-sm text-text dark:text-dk-text mb-2">• Tornar-me referência técnica em <strong>desenvolvimento back-end</strong></p>
+            <p class="text-sm text-text dark:text-dk-text mb-2">• Alcançar fluência em inglês</p>
+            <p class="text-sm text-text dark:text-dk-text mb-2">• Trabalhar com <strong>arquitetura de sistemas</strong></p>
+            <p class="text-sm text-text dark:text-dk-text">• Consolidar carreira em posição de <strong>liderança técnica</strong></p>
+          </div>
+        </div>
+
+        <div class="relative mb-6">
+          <p class="text-xl font-semibold text-secondary dark:text-dk-secondary mb-4 cursor-pointer" onclick="togglePopup('metasConcluidas')">
+            Metas Concluídas
+          </p>
+          <div id="metasConcluidas" class="opacity-0 invisible absolute z-10 bg-white dark:bg-dk-primary p-4 rounded-lg shadow-lg text-left -mt-2 transition-all duration-700">
+            <p class="text-sm text-text dark:text-dk-text mb-2">• Iniciar graduação em <strong>Análise e Desenvolvimento de Sistemas</strong></p>
+            <p class="text-sm text-text dark:text-dk-text mb-2">• Concluir curso de <strong>Desenvolvimento Backend</strong> no Estartando Devs</p>
+            <p class="text-sm text-text dark:text-dk-text">• Desenvolver primeiro projeto full-stack (<strong>Kognito</strong>)</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
+
+  <script is:inline>
+    document.addEventListener('DOMContentLoaded', () => {
+      let activePopup = null;
+      let timeoutId = null;
+
+      window.togglePopup = function(popupId) {
+        const popup = document.getElementById(popupId);
+        
+        // Se já existe um popup ativo, esconde ele
+        if (activePopup && activePopup !== popup) {
+          activePopup.classList.add('opacity-0', 'invisible');
+          activePopup.classList.remove('opacity-100', 'visible');
+        }
+
+        // Limpa o timeout anterior se existir
+        if (timeoutId) {
+          clearTimeout(timeoutId);
+        }
+
+        // Toggle do popup atual
+        if (popup.classList.contains('opacity-0')) {
+          popup.classList.remove('opacity-0', 'invisible');
+          popup.classList.add('opacity-100', 'visible');
+          activePopup = popup;
+
+          // Define o novo timeout
+          timeoutId = setTimeout(() => {
+            popup.classList.remove('opacity-100', 'visible');
+            popup.classList.add('opacity-0', 'invisible');
+            activePopup = null;
+          }, 7000); // 7 segundos
+        } else {
+          popup.classList.remove('opacity-100', 'visible');
+          popup.classList.add('opacity-0', 'invisible');
+          activePopup = null;
+        }
+      };
+
+      window.copyToClipboard = function(text) {
+        navigator.clipboard.writeText(text).then(() => {
+          alert('Código copiado para a área de transferência!');
+        }).catch(err => {
+          console.error('Erro ao copiar texto: ', err);
+        });
+      };
+
+      // Fecha o popup quando clicar fora dele
+      document.addEventListener('click', (e) => {
+        if (activePopup && !activePopup.contains(e.target) && !e.target.classList.contains('cursor-pointer')) {
+          activePopup.classList.remove('opacity-100', 'visible');
+          activePopup.classList.add('opacity-0', 'invisible');
+          activePopup = null;
+          if (timeoutId) {
+            clearTimeout(timeoutId);
+          }
+        }
+      });
+    });
+  </script>
 </BaseLayout>
