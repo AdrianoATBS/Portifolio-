@@ -23,6 +23,7 @@ export default function DarkModeUtility() {
   const handleThemeMode = () => {
     const element = document.documentElement;
     element.classList.toggle("dark");
+    console.log("Tema atual:", element.classList.contains("dark") ? "escuro" : "claro");
 
     if (
       window.localStorage.getItem("theme") === null ||

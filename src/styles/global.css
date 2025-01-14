@@ -6,18 +6,20 @@ body {
   font-family: "Roboto", sans-serif;
   margin: 0;
   padding: 0;
+  background-color: #FFFFFF;
 }
+
 html {
   scroll-behavior: smooth;
 }
 
 * {
-  scrollbar-color: theme(colors.secondary) theme(colors.primary);
+  scrollbar-color: #6366F1 #FFFFFF;
   scrollbar-width: thin;
 }
 
 html.dark {
-  scrollbar-color: theme(colors.dk-secondary) theme(colors.dk-primary);
+  scrollbar-color: #818CF8 #0F172A;
 }
 
 h1 {
@@ -26,52 +28,59 @@ h1 {
   font-size: 2.5rem;
   line-height: 2.5rem;
   font-weight: bold;
-  color: theme(colors.secondary);
+  /* color: #6366F1; */
+  margin-bottom: 1rem;
 }
 
 h2 {
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 600;
-  color: theme(colors.secondary);
+  /* color: #6366F1; */
+  margin-bottom: 0.75rem;
 }
 
 h3 {
   font-size: 1.25rem;
   line-height: 1.75rem;
   font-weight: 500;
-  color: theme(colors.secondary);
+  /* color: #6366F1; */
+  margin-bottom: 0.5rem;
 }
 
 h4 {
   font-size: 1rem;
   line-height: 1.5rem;
   font-weight: 400;
-  color: theme(colors.secondary);
+  /* color: #6366F1; */
+  margin-bottom: 0.5rem;
 }
 
 p {
   font-size: 1rem;
   line-height: 1.5rem;
   font-weight: 400;
+  color: #334155;
+  margin-bottom: 1rem;
 }
 
 h2,
 p {
-  color: theme(colors.text);
+  color: #334155;
 }
+
 html.dark h1 {
-  color: theme(colors.dk-secondary);
+  color: #818CF8;
 }
 
 html.dark h2,
 html.dark h3,
 html.dark h4 {
-  color: theme(colors.dk-secondary);
+  color: #818CF8;
 }
 
 html.dark p {
-  color: theme(colors.dk-text);
+  color: #E2E8F0;
 }
 
 html,
@@ -83,18 +92,18 @@ body {
   overflow-wrap: break-word !important;
   word-wrap: break-word !important;
   transition: color 0.25s linear;
-  -webkit-transition: color 0.25s linear;
-  -moz-transition: color 0.25s linear;
-  -ms-transition: color 0.25s linear;
-  -o-transition: color 0.25s linear;
 }
 
 *::selection {
-  background-color: theme(colors.text) !important;
-  color: theme(colors.primary) !important;
+  background-color: #334155 !important;
+  color: #FFFFFF !important;
 }
 
 html.dark *::selection {
-  background-color: theme(colors.dk-text) !important;
-  color: theme(colors.dk-primary) !important;
+  background-color: #E2E8F0 !important;
+  color: #0F172A !important;
+}
+
+html.dark body {
+  background-color: #000000;
 }

@@ -1,0 +1,30 @@
+---
+// src/pages/cursos-e-metas.astro
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Cursos e Metas">
+  <section class="flex flex-col justify-center items-center h-full space-y-6 bg-background dark:bg-dk-primary p-8 rounded-lg shadow-lg">
+    
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full text-center"> <!-- Centralizando as divs -->
+      <div class="text-center"> <!-- Adicionando text-center aqui -->
+        <h2 className="text-2xl font-semibold text-secondary dark:text-dk-secondary mb-4">Meus Cursos</h2>
+        <p className="text-lg text-text dark:text-dk-text">Curso de Python Completo - Danki Code</p>
+        <p className="text-lg text-text dark:text-dk-text">Curso Webmaster Front-End Completo - Danki Code</p>
+        <p className="text-lg text-text dark:text-dk-text">Introdução ao Entity Framework Core - Desenvolvedor.io</p>
+        <p className="text-lg text-text dark:text-dk-text">Desenvolvimento Backend - Estartando Devs</p>
+      </div>
+
+      <div class="text-center"> <!-- Adicionando text-center aqui -->
+        <h2 className="text-2xl font-semibold text-secondary dark:text-dk-secondary mb-4">Minhas Metas</h2>
+        <p className="text-lg text-text dark:text-dk-text">Conquistar meu primeiro emprego como Desenvolvedor de Software.</p>
+        <p className="text-lg text-text dark:text-dk-text">Aprofundar meus conhecimentos em <strong>C# e .NET</strong>.</p>
+        <p className="text-lg text-text dark:text-dk-text">Alcançar fluência em inglês.</p>
+        <p className="text-lg text-text dark:text-dk-text">Aprender sobre <strong>cibersegurança</strong>.</p>
+        <p className="text-lg text-text dark:text-dk-text">Contribuir para projetos open source.</p>
+        <p className="text-lg text-text dark:text-dk-text">Participar de hackathons.</p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
