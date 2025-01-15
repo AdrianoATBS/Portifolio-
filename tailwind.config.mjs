@@ -6,6 +6,7 @@ export default {
   theme: {
     extend: {
       colors: {
+
 // Tema Claro
 'primary': '#ffffff', // Branco
 'secondary': '#228b22', // Verde
@@ -21,6 +22,8 @@ export default {
 'dk-background': '#1a1a1a',
 'dk-card-background': '#282828',
 'dk-text': '#ffffff',
+
+
       },
     },
   },
