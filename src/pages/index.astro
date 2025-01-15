@@ -6,6 +6,25 @@ import About from "../components/about_section/About";
 import Projects from "../components/projects_section/Projects";
 import { Image } from "astro:assets";
 
+const cursos = [
+  {
+    nome: "Desenvolvimento Backend - Estartando Devs",
+    descricao: "Curso completo voltado para o desenvolvimento backend, cobrindo tecnologias e práticas como C#, .NET, Clean Architecture, GIT, SQL, NoSQL, Banco de Dados, API REST, Docker, Testes Unitários, Solid, Scrum e Treinamento de Soft Skills."
+  },
+  {
+    nome: "Introdução ao Entity Framework Core - Desenvolvedor.io",
+    descricao: "Curso introdutório ao Entity Framework Core, abordando mapeamento objeto-relacional, LINQ e consultas avançadas em bancos de dados."
+  },
+  {
+    nome: "Curso Webmaster Front-End Completo - Danki Code",
+    descricao: "Curso focado no desenvolvimento front-end, cobrindo HTML, CSS, JavaScript e boas práticas de design responsivo."
+  },
+  {
+    nome: "Curso de Python Completo - Danki Code",
+    descricao: "Curso introdutório e intermediário de Python, cobrindo lógica de programação, manipulação de dados e desenvolvimento de aplicações básicas."
+  }
+];
+
 const allPosts = await Astro.glob("./posts/*.md");
 ---
 
@@ -30,24 +49,26 @@ const allPosts = await Astro.glob("./posts/*.md");
         </div>
       </div>
     </section>
-  
     <section class="lg:m-0 my-20 mx-2 flex justify-center" id="sobre">
       <About about={info.about} client:visible />
     </section>
-
+      
     <section id="cursos-metas" class="flex flex-col justify-center items-center h-full space-y-6 bg-background dark:bg-dk-primary p-8 rounded-lg shadow-lg scroll-mt-16 max-w-6xl mx-auto">
+
       <h1 class="text-4xl font-bold text-primary dark:text-dk-secondary mb-4">Cursos e Metas</h1>
       
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full text-center"> 
         <div class="text-center">
           <h2 class="text-2xl font-semibold text-secondary dark:text-dk-secondary mb-4">Meus Cursos</h2>
           <div class="grid gap-4">
-            {["Curso de Python Completo - Danki Code", 
-              "Curso Webmaster Front-End Completo - Danki Code",
-              "Introdução ao Entity Framework Core - Desenvolvedor.io",
-              "Desenvolvimento Backend - Estartando Devs"].map((curso) => (
-              <div class="bg-card-background dark:bg-dk-card-background p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                <p class="text-lg text-text dark:text-dk-text">{curso}</p>
+            {cursos.map((curso) => (
+              <div class="group relative">
+                <div class="bg-[#f5f5f5] dark:bg-[#0f0f0f] p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                  <p class="text-lg text-text dark:text-dk-text cursor-help">{curso.nome}</p>
+                  <div class="invisible group-hover:visible absolute z-10 w-80 p-2 mt-2 text-sm rounded-lg shadow-lg bg-[#f5f5f5] dark:bg-[#0f0f0f] text-text dark:text-dk-text transition-all duration-300 delay-1000">
+                    {curso.descricao}
+                  </div>
+                </div>
               </div>
             ))}
           </div>
@@ -56,12 +77,11 @@ const allPosts = await Astro.glob("./posts/*.md");
         <div class="text-center">
           <h2 class="text-2xl font-semibold text-secondary dark:text-dk-secondary mb-4">Minhas Metas</h2>
           <div class="grid gap-4">
-            {["Aperfeiçoar habilidades em C#, .NET e Clean Architecture",
-              "Trabalhar em projetos pessoais ou acadêmicos",
-              "Concluir graduação em ADS",
-              "Conquistar meu primeiro emprego como Desenvolvedor de Software",
-              ].map((meta) => (
-              <div class="bg-card-background dark:bg-dk-card-background p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+            {["Aperfeiçoar habilidades em C# .NET e Clean Architecture", 
+            "Trabalhar em projetos pessoais ou acadêmicos", 
+            "Concluir graduação em ADS", 
+            "Conquistar meu primeiro emprego como Desenvolvedor de Software"].map((meta) => (
+              <div class="bg-[#f5f5f5] dark:bg-[#0f0f0f] p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
                 <p class="text-lg text-text dark:text-dk-text">{meta}</p>
               </div>
             ))}
@@ -78,7 +98,7 @@ const allPosts = await Astro.glob("./posts/*.md");
       <h2 class="text-3xl font-semibold text-secondary dark:text-dk-secondary mb-8">Projetos em Destaque</h2>
       
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full mb-8">
-        <div class="bg-card-background dark:bg-dk-card-background p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+        <div class="bg-[#f5f5f5] dark:bg-[#0f0f0f] p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
           <h3 class="text-xl font-semibold text-secondary dark:text-dk-secondary mb-2">Kognito</h3>
           <p class="text-lg text-text dark:text-dk-text mb-4">App Escolar para Neurodivergentes</p>
           <p class="text-sm text-text dark:text-dk-text mb-4">
@@ -86,7 +106,6 @@ const allPosts = await Astro.glob("./posts/*.md");
             desenvolvida com C#, .NET e Angular.
           </p>
         </div>
-        <!-- Espaço para futuros projetos -->
       </div>
 
       <div class="text-center w-full">

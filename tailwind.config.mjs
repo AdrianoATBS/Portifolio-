@@ -6,21 +6,21 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Tema Claro
-        'primary': '#ffffff', // Branco puro
-        'secondary': '#b87333', // Bronze
-        'background': '#f8f9fa', // Cinza muito claro
-        'card-background': '#f5f5f5', // Branco levemente acinzentado para cards
-        'text': '#000000', // Preto puro
-        'text-secondary': '#2d3748', // Cinza escuro
+// Tema Claro
+'primary': '#ffffff', // Branco
+'secondary': '#228b22', // Verde
+'accent': '#ff0000', // Vermelho
+'background': '#f5f5f5',
+'card-background': '#e5e5e5',
+'text': '#333333',
 
-        // Tema Escuro
-        'dk-primary': '#000000', // Preto puro
-        'dk-secondary': '#cd7f32', // Bronze mais escuro
-        'dk-background': '#0a0a0a', // Preto mais profundo
-        'dk-card-background': '#0f0f0f', // Preto um pouco mais claro que o fundo
-        'dk-text': '#ffffff', // Branco puro
-        'dk-text-secondary': '#e2e8f0', // Cinza muito claro
+// Tema Escuro
+'dk-primary': '#000000', // Preto
+'dk-secondary': '#006400', // Verde escuro
+'dk-accent': '#800000', // Vermelho escuro
+'dk-background': '#1a1a1a',
+'dk-card-background': '#282828',
+'dk-text': '#ffffff',
       },
     },
   },

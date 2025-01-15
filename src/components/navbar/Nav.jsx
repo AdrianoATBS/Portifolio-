@@ -8,9 +8,9 @@ export default function Nav({ posts }) {
 
   const navLinks = [
     { name: "Início", href: "/#inicio" },
-    { name: "Sobre Mim", href: "/#sobre" },      // Alterado para rolagem
+    { name: "Sobre Mim", href: "/#sobre" },      
     { name: "Cursos e Metas", href: "/#cursos-metas" },
-    { name: "Projetos", href: "/#projetos" },    // Alterado para rolagem
+    { name: "Projetos", href: "/#projetos" },    
     { name: "Contato", href: "/#contato" },
   ];
 
