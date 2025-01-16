@@ -8,7 +8,8 @@ const cursos = [
     conclusao: "Dezembro de 2024",
     cargaHoraria: "120 horas",
     local: "Rio de Janeiro",
-    descricao: "Curso completo voltado para o desenvolvimento backend, cobrindo tecnologias e práticas como C#, .NET, Clean Architecture, GIT, SQL, NoSQL, Banco de Dados, API REST, Docker, Testes Unitários, Solid, Scrum e Treinamento de Soft Skills."
+    descricao: "Curso completo voltado para o desenvolvimento backend, cobrindo tecnologias e práticas como C#, .NET, Clean Architecture, GIT, SQL, NoSQL, Banco de Dados, API REST, Docker, Testes Unitários, Solid, Scrum e Treinamento de Soft Skills.",
+    certificadoImg: "/certificados/estartando-devs.png"
   },
   {
     nome: "Introdução ao Entity Framework Core - Desenvolvedor.io",
@@ -34,6 +35,13 @@ const cursos = [
     codigoValidacao: "eee4ac1d-0cd3-4343-bfce-16fcadf2f44b",
     linkValidacao: "https://cursos.dankicode.com/validate-certificate",
     descricao: "Curso introdutório e intermediário de Python, cobrindo lógica de programação, manipulação de dados e desenvolvimento de aplicações básicas."
+  },
+  {
+    nome: "Curso de Git e GitHub",
+    instituicao: "Curso em Vídeo",
+    conclusao: "27 de janeiro de 2023",
+    cargaHoraria: "20 horas",
+    descricao: "Curso completo sobre controle de versão e uso do GitHub, abordando desde os fundamentos do Git até o uso avançado de repositórios remotos e colaboração em projetos."
   }
 ];
 
@@ -52,7 +60,7 @@ const metas = {
     titulo: "1 a 3 anos",
     items: [
       "Concluir minha graduação em Análise e Desenvolvimento de Sistemas",
-      "Iniciar uma pós-graduação em áreas como Engenharia de Software ou Cibersegurança",
+      "Iniciar uma pós-graduação em áreas como Engenharia de Software ou Arquitetura de Software",
       "Participar ativamente de projetos em equipe, desenvolvendo habilidades técnicas e interpessoais",
       "Aprofundar meus conhecimentos em arquitetura de sistemas, com foco em APIs e segurança"
     ]
@@ -60,7 +68,6 @@ const metas = {
   longo: {
     titulo: "3 a 5 anos",
     items: [
-      "Tornar-me referência técnica em desenvolvimento back-end, liderando projetos dentro da empresa onde estiver atuando",
       "Alcançar fluência em inglês, estando apto a trabalhar em projetos internacionais",
       "Trabalhar em projetos que envolvam arquitetura de sistemas, aplicando práticas avançadas para criar soluções escaláveis e seguras",
       "Consolidar minha carreira em uma posição de liderança técnica, ajudando outros profissionais a crescerem e contribuindo para o sucesso da equipe"
@@ -115,6 +122,17 @@ const metas = {
                          class="inline-block bg-secondary text-white py-2 px-4 rounded-lg text-sm font-semibold transition duration-300 hover:bg-secondary/80">
                         Validar Certificado
                       </a>
+                    </div>
+                  )}
+                  {curso.certificadoImg && (
+                    <div class="mt-4">
+                      <h4 class="text-lg font-semibold text-secondary dark:text-dk-secondary mb-2">Certificado</h4>
+                      <img 
+                        src={curso.certificadoImg} 
+                        alt={`Certificado ${curso.nome}`} 
+                        class="w-full max-w-2xl mx-auto rounded-lg shadow-md hover:shadow-xl transition-shadow cursor-pointer"
+                        onclick={`window.open('${curso.certificadoImg}', '_blank')`}
+                      />
                     </div>
                   )}
                 </div>
