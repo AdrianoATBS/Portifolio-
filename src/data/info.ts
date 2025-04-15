@@ -2,7 +2,7 @@ export const info = {
   name: "Adriano Teixeira Benevenuto Sampaio",
   brief_description: "Desenvolvedor de software, apaixonado por tecnologia e por criar soluções eficientes.",
   role: "Desenvolvedor de Software",
-  picture: "/pic.png",
+  picture: "/Foto.jpeg",
   picture_alt: "Adriano Sampaio",
   location: "Rio de Janeiro, Brasil",
   cv: "/resume.pdf",
